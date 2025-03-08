@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.edit_link{
+    cursor: pointer;
+
+}
+
+.edit_link:hover{
+    color: #fff;
+}
+
+.col-1.text-end .delete_link{
+    cursor: pointer;
+
+    color: rgb(145, 4, 4);
+    
+    
+    
+}
+
+.col-1.text-end .delete_link:hover{
+    color: rgb(229, 14, 14);
+}
+
+.col-1.text-end .delete_link i{
+    position: relative;
+    right: 7px;
+    
+    
+    
+}
+
+

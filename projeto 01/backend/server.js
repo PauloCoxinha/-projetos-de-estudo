@@ -1,0 +1,100 @@
+
+const express = require('express');
+const mysql = require('mysql2');
+const cors = require('cors');
+const path = require('path');
+const { error } = require('console');
+// opções de conexão comm o mysql//
+
+const app = express();
+const PORT = 3000;
+
+app.use(cors());
+
+app.use(express.json());
+
+app.use(express.static(path.join(__dirname, '../frontend')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
+
+
+
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'root',
+    password: 'kositiskositos',
+    database: 'bd_tasks'
+
+});
+
+
+
+
+app.listen(PORT, () => {
+    console.log(`servidor iniciad na porta: ${PORT}`);
+})
+
+
+
+
+
+
+//rotas
+//-----------------------------------------------------------------
+app.get("/", (_req, res) => {
+
+    //res mmanda ola mundo
+
+    connection.query("SELECT COUNT(*) AS users FROM users", (err, results) => {
+        if (err) return res.status(500).json({ error: err.message });
+        res.json(results);
+
+    });
+
+
+});
+
+//-----------------------------------------------------------------
+
+app.get("/user/:id", (req, res) => {
+    const userId = req.params.id;
+
+    connection.query(
+        "SELECT id, username, create_at, updated_at FROM users WHERE id = ?",
+        [userId],
+        (err, results) => {
+            if (err) return res.status(500).json({ error: 'Erro no banco de dados' });
+            if (results.length === 0) return res.status(404).json({ error: 'Usuário não encontrado' });
+            res.json(results[0]);
+        }
+    );
+});
+
+
+app.get("/user/:id/tasks", (req, res) => { 
+    const userId = parseInt (req.params.id);
+
+    if(isNaN(userId)){
+        return res.status(400).json({ error: "ID do usuario é obrigatorio!"});
+    }
+
+    connection.query(
+        "SELECT * FROM tasks WHERE id_user = ?", 
+        [userId],
+        (err, results) => {
+            if (err) {
+                console.error("Erro ao buscar tarefas:", err);
+                return res.status(500).json({ error: err.message });
+            }
+
+            res.json(results);
+        }
+    );
+});
+
+    
+
+
+

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas </title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/fontawesome/all.min.css">
+    <link rel="shortcut icon" href="assets/favicon/favicon_io/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>  
+
+<!-- Rodapé -->
+    <div class="container my-3">
+        <div class="row mb-4">
+            <div class="col">
+                <div class="d-flex justify-content-start">
+
+                    <img src="assets/favicon/favicon_io/favicon.ico" alt="Logo" srcset="" class="img-fluid me-4" width="10%">
+
+                    <h1>Lista de Tarefas</h1>
+
+                </div>
+            </div>
+
+            <div class="col text-end"> 
+
+                <div class="d-flex justify-content-end">
+
+                
+
+                <select id="select_filter" class="form-select me-3 w-50">
+                    <option value="1">Filtro 1</option>
+                    <option value="1">Filtro 1</option>
+                    <option value="1">Filtro 1</option>
+                    <option value="1">Filtro 1</option>
+                    <option value="1">Filtro 1</option>
+
+
+                </select>
+
+                <a href="new_task.html" class="btn btn-primary"><i class="fa-solid fa-plus"></i> Nova Tarefa</a> 
+
+                </div>
+            </div>
+            <hr class="my-3">
+            <h3 class="m-0 p-0"><i class="fa-solid fa-user-tie text-info me-2"></i> <span id="username"></span></h3> 
+            <hr class="my-3">
+
+
+        </div>
+<!-- Rodapé Termina aqui -->
+
+                    <!-- aspecto visual de uma tarefa -->
+
+                    
+                            <div id="tasks_container" > </div>
+    
+                       
+    <!-- Total Tarefas -->
+                        
+                        <div class="row d-none" id="total_tasks">
+                           <div class="col">
+           
+                                   <h4>Tarefas: <span class="text-info font-weight-bold" >4</span></h4>
+                           </div>
+                        </div>
+                              
+                                   
+
+             
+
+
+
+
+            <!-- Sem Tarefas -->
+            <div class="row d-none" id="no_tasks">
+                <div class="col text-center">
+                    <span class="opacity-75" >Não existem tarefas para apresentar   </span>
+                </div>
+            </div>
+
+
+    
+
+
+
+            <!-- Footer -->
+             <div class="row mt-3 ">
+                <div class="col text-center">
+                    <hr>
+                        <p>Lista de tarefas &copy; 2025</p>
+                </div>
+             </div>
+        
+
+
+    </div>
+
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
