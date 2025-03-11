@@ -33,7 +33,7 @@ const connection = mysql.createConnection({
 
 
 app.listen(PORT, () => {
-    console.log(`servidor iniciad na porta: ${PORT}`);
+    console.log(`servidor iniciado na porta: ${PORT}`);
 })
 
 
@@ -93,6 +93,28 @@ app.get("/user/:id/tasks", (req, res) => {
         }
     );
 });
+
+
+app.post("/user/tasks/updated_status/", (req, res) => {   
+    console.log(req.body.id_task);
+    console.log(req.body.status);
+
+    connection.query(
+        "UPDATE tasks SET task_status = ?, updated_at = NOW() WHERE id = ?", 
+        [req.body.status, req.body.id_task],
+        (err, results) => {  // Callback para capturar erro e resultado
+            if (err) {
+                console.error("Erro no MySQL:", err);
+                return res.status(500).send("MYSQL error connection");
+            }
+            res.json({ message: "Status atualizado com sucesso!", results });
+        }
+    );
+});
+
+
+    
+
 
     
 
