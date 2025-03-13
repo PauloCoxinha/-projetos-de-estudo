@@ -171,27 +171,24 @@
             }
         })  
 
-        .then(dados => {
+        .then(dados => {    
             console.log(dados);
         })
 
         //aki eu vou colocar o método que eu vou usar para trocar as cores do task_status//
-        let color = colors.find(e => e.task_status == status);
-        console.log(color);
-
+        let color_obj = colors.find(e => e.task_status == status);
+       
+        let select = document.querySelector(`#task_status_${id_task}`);
         
-        if(tarefa.task_status === 'new'){
-            document.querySelector("#news").classList.remove;
-            document.querySelector("#news").classList.add("bg-white")
-            
-        } if(tarefa.task_status ==='in progress'){
-            document.querySelector("#progress").classList.remove;
-            document.querySelector("#progress").classList.add("bg-info")
-        }
 
+        let colors_tmp = colors.map(c => {return c.select_bg_color});
+        select.classList.remove(...colors_tmp);
+        select.classList.add(color_obj.select_bg_color);
        
         
     }
+
+    
 
 
     /*
