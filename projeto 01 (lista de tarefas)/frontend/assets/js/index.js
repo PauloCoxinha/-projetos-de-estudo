@@ -190,6 +190,12 @@
 
     
 
+    document.querySelector('#button_new_task').addEventListener('click', () => {
+            
+            const url = window.location.origin + "/new_Task.html?id_user=" + id_user;
+            window.location.href = url;
+    });
+
 
     /*
     id_user
