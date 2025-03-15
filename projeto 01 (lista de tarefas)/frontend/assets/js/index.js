@@ -166,7 +166,7 @@
         })
         .then(response => {
 
-            if(response === 200){
+            if(response === 200){   
                 return response.json();
             }
         })  
@@ -193,7 +193,7 @@
     document.querySelector('#button_new_task').addEventListener('click', () => {
             
             const url = window.location.origin + "/new_Task.html?id_user=" + id_user;
-            window.location.href = url;
+            window.location.href = url; 
     });
 
 
