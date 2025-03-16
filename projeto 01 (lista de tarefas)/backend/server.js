@@ -135,6 +135,52 @@ app.post("/user/tasks/new_task/", (req, res) => {
 
 
 
+app.get("/user/tasks/get_task/:id_task", (req, res) =>  {
+    
+
+    connection.query(   
+        "SELECT * FROM tasks WHERE id = ?",
+     [req.params.id_task], 
+       
+        (err, results) => {
+            if (err) {
+                res.send.status(500).json({error: "MySQL error:" + err.message});
+                
+            }       
+
+            if (results.length === 0){
+                return res.status(404).json({error: "Tarefa n encontrada "})
+            }
+        
+          
+        
+            res.json(results[0]);  
+            
+   
+        })  
+});
+
+///user/tasks/get_task
+
+
+app.post("/user/tasks/updated_task", (req, res) => {   
+    
+    connection.query(
+        "UPDATE tasks SET task_text = ?, updated_at = NOW() WHERE id = ?", 
+        [req.body.task_text, req.body.id_task],
+        (err, results) => {  // Callback para capturar erro e resultado
+            if (err) {
+                console.error("Erro no MySQL:", err);
+                return res.status(500).send("MYSQL error connection");
+            }
+            res.json({ message: "Status atualizado com sucesso!", results });
+        }
+    );
+});
+
+
+
+
     
 
 

@@ -148,6 +148,8 @@
 
     function edit_task(id_task){
         console.log(id_task);
+        const url = window.location.origin + "/edit_Task.html?id_task=" + id_task;
+            window.location.href = url; 
     }
 
     function delete_task(id_task){
@@ -195,6 +197,8 @@
             const url = window.location.origin + "/new_Task.html?id_user=" + id_user;
             window.location.href = url; 
     });
+
+
 
 
     /*
