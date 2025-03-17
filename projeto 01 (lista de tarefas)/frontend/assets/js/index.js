@@ -115,7 +115,7 @@
                                     <select id="task_status_${tarefa.id}" onchange="change_task_status(${tarefa.id})" class="form-select p-2 ${color.select_bg_color}">
                                         <option class="bg-white" id="news" value="new" ${tarefa.task_status === 'new' ? "selected" : ""}>New</option>
                                         <option class="bg-info" id="progress" value="in progress" ${tarefa.task_status === "in progress" ? "selected" : ""}>In Progress</option>
-                                        <option class="bg-danger" id="cancel" value="canceled" ${tarefa.task_status === "canceled" ? "selected" : ""}>Canceled</option>
+                                           <option class="bg-danger" id="cancel" value="canceled" ${tarefa.task_status === "canceled" ? "selected" : ""}>Canceled</option>
                                         <option class="bg-success" id="done" value="done" ${tarefa.task_status === "done" ? "selected" : ""}>Done</option>
                                     </select>
                                 </div>
@@ -155,7 +155,7 @@
     function delete_task(id_task){
         const url = window.location.origin + "/delete_Task.html?id_task=" + id_task;
         window.location.href = url;
-    }
+    }   
   
     function change_task_status(id_task){
        

@@ -178,6 +178,22 @@ app.post("/user/tasks/updated_task", (req, res) => {
     );
 });
 
+app.get("/user/tasks/delete_task/:id_task", (req, res) => {
+
+
+    connection.query(
+        "DELETE FROM tasks WHERE id = ?",
+        [req.params.id_task],
+        (err, results) => {
+            if(err){
+                console.error("Erro no MySQL", error);
+                return res.status(500).send("MySQL error connection");
+            }
+                res.json({message: "Task deletada com sucesso!", results})
+        }
+    );
+});
+
 
 
 

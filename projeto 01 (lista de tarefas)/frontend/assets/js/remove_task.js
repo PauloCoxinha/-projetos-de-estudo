@@ -1,4 +1,4 @@
-let id_user = null;
+let id_task = null;
 
 window.onload = () =>  {
     const url = new URL(window.location.href);
@@ -20,10 +20,48 @@ window.onload = () =>  {
 
     .then(task => {
         console.log(task);
-      document.querySelector("#task_text").textContent = task.task_text;
       
+
+      let status = {
+        'new': 'nova tarefa',
+        'in progress': 'em progresso',
+        'canceled': 'cancelado',
+        'done': 'concluido'
+        };  
+
+        console.log(status)
+
+        document.querySelector("#task_text").textContent = task.task_text;
+      document.querySelector("#task_status").textContent = task.task_status;
+        
        
 
     })
     
 }
+ 
+
+document.querySelector("#btn_eliminar").addEventListener("click", () => {
+        console.log(`Eliminar a tarefa cujo o id = ${id_task}`);
+
+        
+    fetch(`http://localhost:3000/user/tasks/delete_task/${id_task}`)
+    .then(response => {
+
+        if(response.status === 200){
+            return response.json();
+        } else {
+            console.log("ERRO!");
+            
+        }
+    })  
+    window.location.href = window.location.origin + "/index.html";
+
+ 
+})
+
+/* new
+in progress
+canceled
+done 
+*/
