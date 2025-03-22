@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+
+
+img{
+    width: 350px;
+   
+}
+h1{
+ text-align: center;
+ position: relative;
+ bottom: 20px;
+ right: 30px;
+ 
+ 
+ 
+        
+   
+}
+
+button{
+   
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+    
+    
+    
+    
+    
+    
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#yes{
+    background-color: rgb(64, 209, 64);
+    border: 1px solid rgb(34, 117, 34);
+}
+
+#yes:hover{
+    background-color: rgb(45, 143, 45);
+}
+
+#no:hover{
+    background-color: rgb(99, 35, 35);
+}
+
+#no{
+    background-color: rgb(185, 67, 67);
+    border: 1px solid rgb(99, 35, 35);
+    
+}
+

@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+   
+}
+
+
+/*
+Created with https://www.css-gradient.com/
+Gradient link: https://www.css-gradient.com/?c1=29049c&c2=100322&gt=r&gd=dbr
+*/
+
+body{
+/*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=29049c&c2=100322&gt=r&gd=dbr
+*/
+background: linear-gradient(to bottom,#0c002b, #11003f, #1a0061 );
+height: 100vh;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+}

@@ -79,16 +79,27 @@ app.get("/user/:id", (req, res) => {
 });
 
 
-app.get("/user/:id/tasks", (req, res) => { 
-    const userId = parseInt (req.params.id);
-
+app.get("/user/:id/tasks/:status?", (req, res) => { 
+    const userId = parseInt(req.params.id);
+    const statusId = req.params.status;
+   
+    
     if(isNaN(userId)){
         return res.status(400).json({ error: "ID do usuario é obrigatorio!"});
-    }
+    } 
+
+    let query = "SELECT * FROM tasks WHERE id_user = ?";
+    let params = [userId];
+
+    if(statusId && statusId != "all"){
+        query += " AND task_status = ?"
+        params.push(statusId);
+
+    }   
+    
 
     connection.query(
-        "SELECT * FROM tasks WHERE id_user = ?", 
-        [userId],
+        query, params,
         (err, results) => {
             if (err) {
                 console.error("Erro ao buscar tarefas:", err);
@@ -98,6 +109,7 @@ app.get("/user/:id/tasks", (req, res) => {
             res.json(results);
         }
     );
+
 });
 
 
@@ -144,7 +156,7 @@ app.get("/user/tasks/get_task/:id_task", (req, res) =>  {
        
         (err, results) => {
             if (err) {
-                res.send.status(500).json({error: "MySQL error:" + err.message});
+              return res.status(500).json({error: "MySQL error:" + err.message});
                 
             }       
 
@@ -186,7 +198,7 @@ app.get("/user/tasks/delete_task/:id_task", (req, res) => {
         [req.params.id_task],
         (err, results) => {
             if(err){
-                console.error("Erro no MySQL", error);
+                console.error("Erro no MySQL", err);
                 return res.status(500).send("MySQL error connection");
             }
                 res.json({message: "Task deletada com sucesso!", results})
