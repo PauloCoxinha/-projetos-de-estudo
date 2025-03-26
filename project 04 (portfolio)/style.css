@@ -3,7 +3,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    
+    box-sizing: border-box;
    
 }
 
@@ -21,7 +21,40 @@ body{
 background: linear-gradient(to bottom,#0c002b, #11003f, #1a0061 );
 height: 100vh;
 margin: 0;
-display: flex;
-justify-content: center;
-align-items: center;
+
+
 }
+
+.header{
+    display: flex;
+    width: 70%;
+    background-color: #060367;
+    position: relative;
+    top: 30px;
+    height: 40px;
+    left: 14%;
+    justify-content: center;
+    outline: none;
+    
+    
+    
+
+}
+
+ .headerspan{
+    display: flex;
+   position: relative;
+   right: 20%;
+   align-items: center;
+    margin-right: 10px  ;
+    font-size: 20px;
+   color: #fff;
+
+   
+   
+}
+
+i{
+    font-size: 30px;
+}
+  
