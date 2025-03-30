@@ -41,7 +41,7 @@ background-attachment: fixed;
     justify-content: center;
     outline: none;
     border-radius: 10px;
-    
+    box-shadow: 0px -1px 20px #06003a;
     
     
 
@@ -50,7 +50,7 @@ background-attachment: fixed;
  .headerspan{
     display: flex;
    
-  
+  cursor: pointer;
    align-items: center;
     margin-left: 5px;
     margin-right: 28px;
@@ -62,6 +62,7 @@ background-attachment: fixed;
    
    
 }
+
 
 i{
     font-size: 25px;
@@ -96,6 +97,7 @@ i{
     position: relative;
     top: 100px;
     margin: 0 auto;
+    box-shadow: 0px -1px 20px #05002e;
 
 }
 
@@ -117,7 +119,7 @@ i{
     text-align: center;
     color: #fff;
     font-family: 'Poppins';
-    margin: 0 auto;
+    margin: 20px auto;
     
     
     
@@ -153,7 +155,7 @@ i{
     margin-bottom: 20px;
     flex-direction: column;
     gap: 10;
-    
+    box-shadow: 0px -1px 20px #05002e;
     
     position: relative;
         
@@ -185,9 +187,108 @@ i{
 }
 
  #class .css{
-    position: relative;
-    width: 100%;
+    display: flex;
+    position: absolute;
+    width: 42%;
+    right: 20px;
+    top: 122px;
+    animation: fadeIn 3s; 
+    border-radius: 30px;
     background-color: #4c28eb;
-    height: 300px;
+    height: 10px;
 }
+
+#class .html5{
+    display: flex;
+    position: absolute;
+    width: 42%;
+    right: 20px;
+    top: 186px;
+    animation: fadeIn 3s; 
+    border-radius: 30px;
+    background-color: #4c28eb;
+    height: 10px; 
+}
+
+#class .js{
+    display: flex;
+    position: absolute;
+    width: 25%;
+    right: 170px;
+    top: 253px;
+    
+    border-radius: 30px;
+    background-color: #4c28eb;
+    height: 10px; 
+    animation: fadeIn 3s; 
+
+}
+
+#class .mysql{
+    display: flex;
+    position: absolute;
+    width: 20%;
+    right: 210px;
+    top: 318px;
+    animation: fadeIn 3s; 
+    border-radius: 30px;
+    background-color: #4c28eb;
+    height: 10px; 
+}
+
+#class .react{
+    display: flex;
+    position: absolute;
+    width: 20%;
+    right: 208px;
+    top: 394px;
+    animation: fadeIn 3s; 
+    border-radius: 30px;
+    background-color: #4c28eb;
+    height: 10px; 
+}     
+
+
+
+/*base code*/
+.animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  .animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+  }
+  .animated.hinge {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+  }
+  /*the animation definition*/
+  @-webkit-keyframes fadeIn {
+    0% {
+      opacity: 0
+    }
+    100% {
+      opacity: 1
+    }
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0
+    }
+    100% {
+      opacity: 1
+    }
+  }
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    animation-range: entry 0% cover 40%;
+    animation-timeline: view();
+  }
+
+
+
   
