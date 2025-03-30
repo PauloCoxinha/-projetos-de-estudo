@@ -9,7 +9,7 @@ const { error } = require('console');
 const app = express();
 const PORT = 3000;
 
-app.use(cors());
+app.use(cors());                
 
 app.use(express.json());
 
