@@ -9,12 +9,14 @@
 <body>
     <div class="wrapper">
         <h1 id="titulo">Register</h1>
-        <input type="email" required placeholder="email"class="enput">
-            <input type="text" required placeholder="usuario" maxlength="20" minlength="10" class="enput">
-            <input type="password" required placeholder="senha" maxlength="20" minlength="10" class="enput">
-            <input type="password" required placeholder="confirme a senha" maxlength="20" minlength="10" class="enput">
+        <form id="formregister">
+            <input type="email" name="mail" id="mail" required placeholder="email"class="enput">
+                <input type="text" name="username" id="user" required placeholder="usuario" maxlength="20" minlength="10" class="enput">
+                <input type="password" name="pass" id="pass" placeholder="senha" maxlength="20" minlength="10" class="enput">
+                <input type="password" id="confirmpass" name="pass" required placeholder="confirme a senha" maxlength="20" minlength="10" class="enput">
             
-            <button id="botaoreg">Register</button>
+                <button type="submit" id="botaoreg">Register</button>
+        </form>
        
     </div>
 
