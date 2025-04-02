@@ -1,7 +1,7 @@
 
 
 
-document.getElementById("formregister").addEventListener("submit", async function (event) {
+const salvarinfo = document.getElementById("formregister").addEventListener("submit", async function (event) {
  
     event.preventDefault();
 
@@ -23,7 +23,7 @@ document.getElementById("formregister").addEventListener("submit", async functio
     }
 
     try{
-        const response = await fetch('http://127.0.0.1:3000/register', {
+        const response = await fetch('http://localhost:3000/register.html', {
             method: 'POST',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify(userData)
@@ -38,8 +38,42 @@ document.getElementById("formregister").addEventListener("submit", async functio
         alert('ERRO AO REGISTRAR O USUARIO')
     }
 
-    document.querySelector('#botaoreg').addEventListener("click", () => {
-        setTimeout(() => { window.location.href = window.location.origin + "/index.html" }, 4 * 1000)
-        })
-})
+    
 
+   
+})
+if(salvarinfo == true){
+document.querySelector('#botaoreg').addEventListener("click", () => {
+    setTimeout(() => { window.location.href = window.location.origin + "/index.html" }, 4 * 1000)
+    })
+
+}
+
+
+document.querySelector('#botaolog').addEventListener("click", async () => {
+
+    const userlog = document.querySelector("#userlog").value;
+    const passlog = document.querySelector("#passlog").value;
+
+
+   const userdata = { userlog, passlog };
+
+    try{
+        const response = await fetch ('http://localhost:3000/index', {
+            method: 'POST',
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(userdata)
+        })
+        const result = await response.json();
+       
+        if(response.status === 200){
+            alert('✅' + result.message);
+            window.location.href = "/pagina.html"
+        } else {
+            alert('❌' + result.message);
+        }
+    } catch (error) {
+         console.error("Erro Login", error);
+         alert("Erro no servidor");
+    }
+})
