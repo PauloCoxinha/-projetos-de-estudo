@@ -6,6 +6,8 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+
+    scroll-behavior: smooth;
     
    
 }
@@ -63,6 +65,11 @@ background-attachment: fixed;
    
 }
 
+a{
+  text-decoration: none;
+  margin-top: 10px;
+}
+
 
 i{
     font-size: 25px;
@@ -81,6 +88,7 @@ i{
 
 .mediasocial a{
     color: #fff;
+    margin-top: 10px;
     
 }
 
