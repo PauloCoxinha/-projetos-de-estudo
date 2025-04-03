@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"))
+    res.sendFile(path.join(__dirname, "login.html"))
 })
 
 const PORT = 3000;
@@ -45,7 +45,9 @@ db.connect((err) => {
     console.log('banco de dados conectado')
 })
 
-
+app.get("/login", (req, res) => {
+    res.sendFile(path.join(__dirname, "login.html"))
+})
 
 app.post("/login", (req, res) => {
    
