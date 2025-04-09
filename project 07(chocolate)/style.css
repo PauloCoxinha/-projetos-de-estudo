@@ -47,6 +47,7 @@
     height: 100vh;
     z-index: 1;
     overflow: hidden;
+    box-shadow: inset 1px 0px 20px 20px #040211;
 }
 
 .principal-pag::before{
@@ -60,6 +61,7 @@
     background-size: cover;
     opacity: 0.4;
     z-index: -1;
+    
 }
 
 .principal-pag a{
@@ -116,11 +118,11 @@
 }
 
 .headerR span a {
-    margin-right: 20px;
+    margin-right: 10px;
     font-size: 20px;
     margin-left: 20px;
     padding: 10px;
-    font-weight: bold;
+    
 }
 
 .headerR button{
@@ -133,30 +135,8 @@
     
 }
 
-.botaologin{
-         /* Cor e espessura da borda */
-              /* Espaço interno */
-              /* Borda arredondada */
-      /* Fundo transparente */
-    color: white;                   /* Cor do texto */
-    font-size: 16px;                /* Tamanho da fonte */
-    font-weight: bold;              /* Texto em negrito */
-    cursor: pointer;                /* Cursor de mãozinha */
-    
-    transform: translateY(-12px); 
-}
-
-.botaologin:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.botaologin:hover{
-    border: 2px solid #DB4D4D; 
-    padding: 8px 10px;   
-    border-radius: 8px; 
-    background-color: transparent;
-    transition: 0.3s ease; 
+.login{
+    font-weight: 400;
 }
 
 h1{
@@ -189,4 +169,76 @@ h1{
     bottom: 30px;
     opacity: 0.7;
     display: flex;  
+}
+
+.secondpage .secondbutton{
+    display: flex;
+    justify-content: center;
+    
+    
+    
+}
+
+.secondbutton button{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    width: 200px;
+    height: 100px;
+    margin-right: 85px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E1E27;
+    border: 2px solid #575774;
+    color: #fff;
+    border-radius: 36px;
+    font-size: 23px;
+    font-family: 'Inter', 'Poppins', Arial, Helvetica, sans-serif;
+    
+}
+
+.secondbutton button:hover{
+    background-color: #121218;
+}
+
+.secondimage{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transform: translateX(-50px);
+   
+
+}
+
+.secondimage img {
+    transform: translateY(-160px);
+    width: 500px;
+    margin-right: 30px;
+    border-radius: 35px;
+    opacity: 0.6;
+}
+
+.secondpage .textpage{
+    position: relative;
+    top: 140px;
+    width: 400px;  
+    left: 130px;    
+}
+
+.secondpage .textpage h1{
+    font-size: 46px;
+}
+
+.secondpage .textpage span {
+    right: 30px;
+      
+    
+}
+
+.secondpage .textpage span p {
+    color: #D5D5D5;
+    text-align: left;
+    font-size: 20px;
+    margin-top: 10px;
 }
