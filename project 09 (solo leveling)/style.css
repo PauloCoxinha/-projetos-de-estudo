@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #0f0c29;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menu {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  list-style: none;
+}
+
+.menuToggle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  border-radius: 50%;
+  font-size: 2em;
+  cursor: pointer;
+  transition: transform 1.5s;
+  border: 2px solid #fff;
+}
+
+.menu.active .menuToggle {
+  transform: translate(-50%, -50%) rotate(315deg);
+}
+
+.menu li {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease;
+}
+
+.menu li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 1.5em;
+  color: transparent;
+  border: 2px solid var(--clr);
+  border-radius: 50%;
+  transition: 0.5s;
+  background: transparent;
+}
+
+.menu.active li {
+  transform: 
+    translate(-50%, -50%) 
+    rotate(calc(45deg * var(--i))) 
+    translateY(-120px);
+}
+
+.menu li a {
+  transform: rotate(0deg);
+}
+
+.menu.active li a {
+  color: var(--clr);
+}
+
+.menu li a:hover {
+  box-shadow: 0 0 15px var(--clr), 0 0 30px var(--clr);
+  background: var(--clr);
+  color: #000;
+}

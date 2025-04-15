@@ -12,7 +12,7 @@ bloco1.addEventListener('mouseover', () => {
         black: document.querySelector('.black')
     };
 
-    elementos.whitetext.style.display = 'none'; 
+    elementos.whitetext.style.display = 'none';     
     elementos.white.style.display = 'none'; 
     elementos.blacktext.style.display = 'none'; 
     elementos.black.style.display = 'none'; 
@@ -52,11 +52,19 @@ bloco2.addEventListener('mouseover', () => {
     const elementos = {
         sombra: document.querySelector('.sombra'),
         barras: document.querySelector(' .barras'),
+        titulodark: document.querySelector('.titulohoverdark'),
+        paragrafodark: document.querySelector('.paragrafohoverdark'),
+        buynowdark: document.querySelector('.buynowdark'),
+        darkhover: document.querySelector('.darkhover')
         
     };
 
     elementos.barras.style.display = 'none'; 
     elementos.sombra.style.display = 'none'; 
+    elementos.titulodark.style.display = 'block';
+    elementos.buynowdark.style.display = 'block';
+    elementos.paragrafodark.style.display = 'block';
+    elementos.darkhover.style.display = 'block'
     
     
 
@@ -69,11 +77,17 @@ bloco2.addEventListener('mouseout', () => {
     const elementos = {
         sombra: document.querySelector('.sombra'),
         barras: document.querySelector(' .barras'),
+        titulodark: document.querySelector('.titulohoverdark'),
+        paragrafodark: document.querySelector('.paragrafohoverdark'),
+        buynowdark: document.querySelector('.buynowdark')
         
     };
 
     elementos.barras.style.display = 'block'; 
     elementos.sombra.style.display = 'block'; 
+    elementos.titulodark.style.display = 'none';
+    elementos.buynowdark.style.display = 'none';
+    elementos.paragrafodark.style.display = 'none';
     
     
 
@@ -87,6 +101,12 @@ const bloco3 = document.querySelector('.special');
 bloco3.addEventListener('mouseover', () => {
     console.log('ta rodando')
 
+
+    const elementoshover = {
+        tituloflavor: document.querySelector('.titulohover'),
+        paragrafoflavor: document.querySelector('.paragrafohover'),
+        botaoflavor: document.querySelector('.buynowflavor')
+    }
     const elementos = {
         barracereja: document.querySelector('.barracereja'),
         cereja: document.querySelector(' .Cereja'),
@@ -104,13 +124,21 @@ bloco3.addEventListener('mouseover', () => {
     elementos.caramel.style.display = 'none'; 
     elementos.titulo.style.display = 'none';
     elementos.titulo2.style.display = 'none';
-    
+    elementoshover.botaoflavor.style.display = 'block';
+    elementoshover.paragrafoflavor.style.display = 'inline-flex';
+    elementoshover.tituloflavor.style.display = 'block';
 
     
 });
 
 bloco3.addEventListener('mouseout', () => {
 
+
+    const elementoshover = {
+        tituloflavor: document.querySelector('.titulohover'),
+        paragrafoflavor: document.querySelector('.paragrafohover'),
+        botaoflavor: document.querySelector('.buynowflavor')
+    }
 
     const elementos = {
         barracereja: document.querySelector('.barracereja'),
@@ -129,11 +157,21 @@ bloco3.addEventListener('mouseout', () => {
     elementos.caramel.style.display = 'block'; 
     elementos.titulo.style.display = 'block';
     elementos.titulo2.style.display = 'block';
+    elementoshover.botaoflavor.style.display = 'none';
+    elementoshover.paragrafoflavor.style.display = 'none';
+    elementoshover.tituloflavor.style.display = 'none';
     
     
 
     
 });
+
+
+const mouseentra = document.querySelector('.linkheader').addEventListener('mouseover', () => {
+    mouseentra.style.cursor = 'pointer';
+})
+
+
 
 
 
