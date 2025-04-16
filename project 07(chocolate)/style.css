@@ -322,8 +322,7 @@ h1{
 
  .products{
     display: flex;
-    gap: 40px;
-    margin-top: 60px;
+    gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
 
@@ -335,7 +334,10 @@ h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 6   00px;
+    min-height: 600px;
+    width: 330px;
+    height: 390px;
+    margin: 0 10px;
 }
 
 .product-item h2{
@@ -359,8 +361,9 @@ h1{
 }
 
 .special .cranberry img{
-    width: 150px;
+    width: 150px;   
     margin-top: 20px;
+    
 }
 
 .special .cranberry h2{
@@ -377,13 +380,22 @@ h1{
 
 .special .cranberry .barracereja{
     position: absolute;
-    left: 230px;
+    left: 100px;
     rotate: 25deg;
     z-index: 2;
+    width: 150px;   
 }   
 
+.special .cranberry .titulo{
+    text-align: center;
+    width: 300px;
+    margin-left: -105px;
+    margin-top: 70px;
+    z-index: 0;
+}
+
 .special .cranberry .Cereja{
-    transform: translateX(90px); 
+    transform: translateX(10px); 
     z-index: 2;   
     
 }   
@@ -400,23 +412,33 @@ h1{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transform: translateX(30px);
+    margin-right: 200px;    
+    margin-top: 30px;
+    
     font-size: 32px;
-    letter-spacing: 1px;
-    height: 30vh;
+    letter-spacing: 1px;    
     color: #BA4C10;
 }
 
 .special .caramel .barracaramelo{
     position: absolute;
-    left: 230px;
+    left: 100px;
     rotate: 25deg;
-    z-index: 1;
+    z-index: 3;
+}
+
+.special .caramel .titulo2{
+    text-align: center;
+    width: 300px;
+    margin-left: -45px;
+    margin-top: 70px;
+    z-index: 0;
 }
 
 .special .caramel .caramelo{
-    transform: translateX(90px); 
+   
     z-index: 2;   
+    width: 200px;
     
 }
 
@@ -452,9 +474,10 @@ h1{
     display: none;
     color: #AD2431;
     text-align: center;
-    margin-right: 50px;
-    margin-bottom: 150px;
+    margin-bottom: 260px;
+    margin-left: 200px;
     font-size: 36px;
+    width: 300px;
 }
 
 .special .caramel .caramelhover .paragrafohover{
@@ -495,12 +518,12 @@ h1{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    
-    flex-direction: column; 
+    transform: translateY(60px);
+    flex-direction: column;
 }
 .dark .darkhover .titulohoverdark{
     display: none;
-    color: #AD2431;
+    color: #868688;
     text-align: center;
     
     font-size: 36px;
@@ -510,53 +533,142 @@ h1{
     font-size: 24px;
     color: #fff;
     display: none;
-            
+    margin-left: 50px;  
     font-family: 'Poppins';
     font-weight: lighter;
 }
 
 .dark .darkhover .buynowdark{
     display: none;
-    background-color: #0a0636; /* fundo azul escuro */
-    color: white;
+    background-color: #121112; /* fundo azul escuro */
+    color: #fff;
      font-weight: bold;
      border: none;
     border-radius: 25px; /* bordas bem arredondadas */
      padding: 10px 50px;
      font-size: 14px;
+     margin-top: 30px;
+     margin-left: 80px;
     cursor: pointer;
    
      transition: background-color 0.3s ease;
 }
 
+.dark .darkhover .buynowdark:hover{
+    background-color: #242224;
+    color: #e6e5e5;
+}
+
 .classic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     /* espaço entre white e black */
+     background: linear-gradient(to right, #C0BFB3 50%, #24201C 50%);
+  }
+
+  .classic .classichover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform: translateY(40px);
+    flex-direction: column;
+
+
+  }
+
     
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        height: 100%;
-      
+
+  .classic .classichover .paragrafohoverclassic{
+    font-size: 24px;
+    color: #000000;
+    display: none;
+    margin-left: 50px;  
+    font-family: 'Poppins';
+    font-weight: bold;
+    margin-top: -180px;
+    
+   
+  }
+
+  .classic .classichover .paragrafohoverclassic p{
+    
+  }
+
+  .classic .classichover .titulohoverclassic{
+    display: none;
+    text-align: center;
+    font-size: 36px ;
+    color: #24201C;
+  }
+
+ 
+
+  .classic .classichover .buynowclassic{
+    display: none;
+    background-color: #3F3632; /* fundo azul escuro */
+    color: #fff;
+     font-weight: bold;
+     border: none;
+    border-radius: 25px; /* bordas bem arredondadas */
+     padding: 10px 50px;
+     font-size: 14px;
+     margin-top:30px;
+    margin-bottom: 100px;
+     margin-left: 80px;
+    cursor: pointer;
+   
+     transition: background-color 0.3s ease;
+  }
+  
+  .classic .classichover .buynowclassic:hover{
+    background-color: #5c4e48;
+  }
+  .classic div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .classic img {
-    width: 146px;
-    height: 146px;
-    border-radius: 100px;
-    margin: 0;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: -30px;
+   
+ 
+    
+
+  }
+
+  .classic img .white{
+   
+  }
+
+  .classic img .black{
+   margin: auto 70px auto 0px;
   }
   
   .classic h2 {
+    display: flex;
+    justify-content: space-between;
     margin: 10px 0;
-    font-size: 24px;
+    font-size: 28px;
+    margin-bottom: 200px;
+    text-align: center;
+    gap: 20px;
+    
+   
   }
   
-  .whitetext { 
+  .classic .whitetext { 
     color: #24201C;
-    margin-top: 20px;
+    margin-right: -90px;
+    
+
   }
-  .blacktext { 
+  .classic  .blacktext { 
     color: #D5D5D5;
-    margin-bottom: 20px;
+    transform: translateX(90px);
   }

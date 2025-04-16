@@ -9,13 +9,25 @@ bloco1.addEventListener('mouseover', () => {
         whitetext: document.querySelector('.whitetext'),
         white: document.querySelector(' .white'),
         blacktext: document.querySelector('.blacktext'),
-        black: document.querySelector('.black')
+        black: document.querySelector('.black'),
+        classichover: document.querySelector('.classichover'),
+        titulohoverclassic: document.querySelector('.titulohoverclassic'),
+        buynowclassic: document.querySelector('.buynowclassic'),
+        paragrafoclassic: document.querySelector('.paragrafohoverclassic'),
+        gradient: document.querySelector('.classic'),
+
     };
 
     elementos.whitetext.style.display = 'none';     
     elementos.white.style.display = 'none'; 
     elementos.blacktext.style.display = 'none'; 
     elementos.black.style.display = 'none'; 
+    elementos.classichover.style.display = 'block';
+    elementos.titulohoverclassic.style.display = 'block';
+    elementos.buynowclassic.style.display = 'block';
+    elementos.paragrafoclassic.style.display = 'block';
+    elementos.gradient.style.background = 'linear-gradient(to bottom, #C0BFB3 50%, #24201C 50%)';
+    
     
 
     
@@ -23,19 +35,29 @@ bloco1.addEventListener('mouseover', () => {
 
 bloco1.addEventListener('mouseout', () => {
 
-
+    
     const elementos = {
         whitetext: document.querySelector('.whitetext'),
         white: document.querySelector(' .white'),
         blacktext: document.querySelector('.blacktext'),
-        black: document.querySelector('.black')
+        black: document.querySelector('.black'),
+        classichover: document.querySelector('.classichover'),
+        titulohoverclassic: document.querySelector('.titulohoverclassic'),
+        paragrafoclassic: document.querySelector('.paragrafohoverclassic'),
+        buynowclassic: document.querySelector('.buynowclassic'),
+        gradient: document.querySelector('.classic'),
     };
 
     elementos.whitetext.style.display = 'block'; 
     elementos.white.style.display = 'block'; 
     elementos.blacktext.style.display = 'block'; 
     elementos.black.style.display = 'block'; 
-    
+    elementos.classichover.style.display = 'none';
+    elementos.titulohoverclassic.style.display = 'none';
+    elementos.buynowclassic.style.display = 'none';   
+    elementos.paragrafoclassic.style.display = 'none';
+    elementos.paragrafoclassic.style.display = 'block';
+    elementos.gradient.style.background = 'linear-gradient(to right, #C0BFB3 50%, #24201C 50%)';
 
     
 });
@@ -77,12 +99,13 @@ bloco2.addEventListener('mouseout', () => {
     const elementos = {
         sombra: document.querySelector('.sombra'),
         barras: document.querySelector(' .barras'),
+        darkhover: document.querySelector('.darkhover'),
         titulodark: document.querySelector('.titulohoverdark'),
         paragrafodark: document.querySelector('.paragrafohoverdark'),
         buynowdark: document.querySelector('.buynowdark')
         
     };
-
+    elementos.darkhover.style.display = 'flex';
     elementos.barras.style.display = 'block'; 
     elementos.sombra.style.display = 'block'; 
     elementos.titulodark.style.display = 'none';
@@ -126,7 +149,7 @@ bloco3.addEventListener('mouseover', () => {
     elementos.titulo2.style.display = 'none';
     elementoshover.botaoflavor.style.display = 'block';
     elementoshover.paragrafoflavor.style.display = 'inline-flex';
-    elementoshover.tituloflavor.style.display = 'block';
+    elementoshover.tituloflavor.style.display = 'inline-flex';
 
     
 });
@@ -170,6 +193,8 @@ bloco3.addEventListener('mouseout', () => {
 const mouseentra = document.querySelector('.linkheader').addEventListener('mouseover', () => {
     mouseentra.style.cursor = 'pointer';
 })
+
+// bloco1.addEventListener('click', () => { ... })
 
 
 
