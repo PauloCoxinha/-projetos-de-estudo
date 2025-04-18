@@ -24,6 +24,8 @@
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Poppins';
+    background-attachment: fixed;
+    scroll-behavior: smooth;
     
     
 }
@@ -138,7 +140,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-    margin-top: -30px;
+    margin-top: -17px;
     
     
 }
@@ -147,7 +149,7 @@
     margin-right: 10px;
     font-size: 20px;
     margin-left: 20px;
-    margin-bottom: 30px;
+    
    
    
     
@@ -164,7 +166,19 @@
 }
 
 .login{
-    font-weight: 400;
+    font-weight: 100;
+}
+
+.login:hover{
+    font-weight: 700;
+}
+
+.headerR #BuyNowPrincipal{
+    font-weight: 100;
+}
+
+.headerR #BuyNowPrincipal:hover{
+    font-weight: 700;
 }
 
 h1{
@@ -235,6 +249,8 @@ h1{
     justify-content: flex-end;
     align-items: center;
     transform: translateX(-50px);
+    border-radius: 55px;
+   
    
 
 }
@@ -243,7 +259,7 @@ h1{
     transform: translateY(-280px);
     width: 500px;
     margin-right: 30px;
-    border-radius: 35px;
+    border-radius: 55px;
     opacity: 0.6;
 }
 
@@ -374,16 +390,16 @@ h1{
     align-items: center;
     justify-content: center;
     transform: translateX(30px);
-    height: 30vh;
     color: #DB4D4D;
 }
 
 .special .cranberry .barracereja{
     position: absolute;
-    left: 100px;
+    left: 90px;
     rotate: 25deg;
     z-index: 2;
-    width: 150px;   
+    width: 150px;  
+    animation: float 2s ease-in-out infinite; 
 }   
 
 .special .cranberry .titulo{
@@ -397,12 +413,14 @@ h1{
 .special .cranberry .Cereja{
     transform: translateX(10px); 
     z-index: 2;   
+    animation: float 2s ease-in-out infinite;
     
 }   
 
 .special .caramel img{
     width: 150px;
     margin-top: 20px;
+    animation: float 2s ease-in-out infinite; 
 }
 
 .special .caramel h2{
@@ -502,6 +520,7 @@ h1{
     width: 330px;
     margin-top: 10px;
     opacity: 0.8;
+    animation: float 2s ease-in-out infinite; 
 }
 
 .dark .sombra{
@@ -511,6 +530,8 @@ h1{
 
         border-radius: 25px;
         margin-left: 90px;
+        animation: sombramove 2s ease-in-out infinite;
+        animation-delay: 0.2;
 }
 
 .dark .darkhover{
@@ -642,9 +663,6 @@ h1{
 
   }
 
-  .classic img .white{
-   
-  }
 
   .classic img .black{
    margin: auto 70px auto 0px;
@@ -665,10 +683,119 @@ h1{
   .classic .whitetext { 
     color: #24201C;
     margin-right: -90px;
+   
     
 
   }
   .classic  .blacktext { 
     color: #D5D5D5;
     transform: translateX(90px);
+    
+    
+    
   }
+
+
+  .animate__animated.animate__pulse{
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }
+
+  .animate__animated.animate__fadeInLeft{
+    
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    
+    
+    
+  } 
+
+
+  .secondimage {
+    opacity: 0;
+  }
+  
+  .secondimage.visible {
+    opacity: 1;
+    animation-name: fadeInRight;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+  }
+
+  .animate__animated.animate__zoomInDown{
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+  }
+
+  .h1semovendo{
+    opacity: 0;
+  }
+
+
+  .h1semovendo.visable {
+    opacity: 1;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+  }
+
+  .secondimage2{
+    opacity: 0;
+  }
+
+  .secondimage2.visable{
+    opacity: 1;
+    animation-name: fadeInLeft;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-fill-mode: both;
+  }
+
+.textpage2 h1{
+   animation-name: zoomInUp;
+   animation-duration: 3s;
+   animation-delay: 1s;
+   animation-fill-mode: both;
+}
+
+.textpage2 p{
+    animation-name: zoomInUp;
+   animation-duration: 2s;
+   animation-delay: 1s;
+   animation-fill-mode: both;
+}
+
+  
+   
+  
+  @keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+  }
+
+  @keyframes sombramove {
+    0%{
+        width: 150px;
+        margin-left: 90px;
+
+    }
+    50%{
+        width: 60px;
+        margin-left: 130px;
+    }
+    100%{
+        width: 150px;
+        margin-left: 90px;
+    }
+  }
+

@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('imagens/wpp 2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.wrapper{
+    
+    width: 420px;
+    padding: 30px 40px;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.555);
+    height: 400px;
+    backdrop-filter: blur(6px);
+    
+}
+
+.wrapper h1{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.795);
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 15px 0px;
+}
+
+.wrapper .input-box input{
+    width: 100%;
+    height: 100%;
+    padding: 20px 45px 20px 20px;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    margin-top: 20px;
+    background: transparent;
+    color:rgb(209, 209, 209);
+    font-weight: 600;
+    border: 2px solid rgba(0, 0, 0, 0.774);
+    
+}
+
+.wrapper .input-box input::placeholder{
+    color: rgb(209, 209, 209);
+}
+
+ .input-box i{
+    position: absolute;
+    right: 20px;
+    top: 55%;
+    transform: translateY(-55%);
+    font-size: 25px;
+    margin: 30px 0px;
+    color: rgb(209, 209, 209);
+
+}
+
+.input-box .bxs-user{
+    bottom: -75px;
+    
+}
+
+.input-box .bxs-low-vision{
+    top: 88px;
+    cursor: pointer;
+    
+}
+
+.wrapper .remember{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 110px;
+
+}
+
+.wrapper .remember label{
+    margin-right: 3px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.wrapper .remember a{
+    margin-left: 10px;
+    font-size: 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.wrapper .remember a:hover{
+    text-decoration: underline;
+}
+
+.wrapper button{
+    margin-top: 30px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #ccbfb3;
+    cursor: pointer;
+}
+
+.wrapper a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 50px;
+   
+}
+
+.wrapper a:hover{
+    text-decoration: underline;
+}
+
+

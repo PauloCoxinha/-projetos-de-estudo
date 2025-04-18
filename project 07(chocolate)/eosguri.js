@@ -197,7 +197,52 @@ const mouseentra = document.querySelector('.linkheader').addEventListener('mouse
 // bloco1.addEventListener('click', () => { ... })
 
 
+    const animatedElement = document.querySelector('.secondimage');
+    const animatedElement2 = document.querySelector('.h1semovendo');
+    const animatedElement3 = document.querySelector('.secondimage2');
+    const animatedElement4 = document.querySelector('.textpage2');
 
+// Cria o observer
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Quando aparecer, adiciona a classe que ativa a animação
+     if(entry.target.classList.contains('secondimage')){
+      entry.target.classList.add('animate__animated', 'animate__fadeInRight', 'visable');
+    }
+
+    if (entry.target.classList.contains('secondimage2')){
+        entry.target.classList.add('animate__animated', 'animate__fadeInLeft', 'visable');
+    }
+
+    if (entry.target.classList.contains('textpage2')){
+        entry.target.classList.add('animate__animated', 'animate__zoomInUp', 'visable');
+    }
+
+    if(entry.target.classList.contains('h1semovendo')){
+      entry.target.classList.add('animate__animated', 'animate__zoomInDown', 'visable');
+    }
+    }   
+  });
+}, {
+  threshold: 0.1 // ativa quando 10% do elemento estiver visível
+});
+
+// Observa o elemento
+observer.observe(animatedElement);
+observer.observe(animatedElement2);
+observer.observe(animatedElement3);
+observer.observe(animatedElement4);
+
+
+
+
+   
+    
+    
+
+
+    
 
 
 

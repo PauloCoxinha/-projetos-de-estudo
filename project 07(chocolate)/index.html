@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chocolate</title>
     <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
         <div class="gradient">
             <div id="opacidade"></div>
             <div class="principal-pag">
                 <div class="header">
-                    <a href="#" class="linkheader">Home</a>
-                    <a href="#" class="linkheader">Chocolates</a>
-                    <a href="#" class="linkheader">about</a>
+                    <a href="index.html" class="linkheader">Home</a>
+                    <a href="#chocolates" class="linkheader">Chocolates</a>
+                    <a href="#sobre" class="linkheader">about</a>
 
 
                 
@@ -21,8 +25,8 @@
                 </div>
                 <div class="headerR">
                 
-                    <span class="login"><a href="login.html" ><strong>Login</strong></a></span>
-                    <span><a href="" id="BuyNowPrincipal"> <strong>Buy Now</strong></a></span>
+                    <span class="login"><a href="login.html" >Login</a></span>
+                    <span><a href="" id="BuyNowPrincipal"> Buy Now</a></span>
             </div>  
 
             <span class="title1">
@@ -46,15 +50,15 @@
 
 
     <div class="gradient">
-        <div class="secondpage">
+        <div class="secondpage" id="sobre">
             <div class="secondbutton">
-                <button>Natural</button>
-                <button>Energy</button>
-                <button>Taste</button>
+                <button class="animate__animated animate__pulse">Natural</button>
+                <button class="animate__animated animate__pulse">Energy</button>
+                <button class="animate__animated animate__pulse">Taste</button>
             </div>
 
             <div class="textpage">
-                <h1>The best chocolate of america</h1>
+                <h1 class="h1semovendo">The best chocolate of america</h1>
                 <span>
                     <p>Hershey's began seeling
                         chocolate in 1900, becoming one of the first
@@ -80,7 +84,7 @@
     </div>
 
     <div class="gradient">
-        <div class="lastpage">
+        <div class="lastpage" id="chocolates">
           <h1>Our Products</h1>
       
           <div class="products">
@@ -142,7 +146,7 @@
                     </div>
                 <h2 class="whitetext">White</h2>
                 <img src="imagens/12.jpg" class="white">
-                <h2 class="blacktext">black</h2>
+                <h2 class="blacktext" >black</h2>
                 <img src="imagens/10.jpg" class="black">
               
             </div>
