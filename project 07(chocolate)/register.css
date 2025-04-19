@@ -15,7 +15,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('imagens/wpp 2.jpg');
+    background: url('imagens/morango.jpg');
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -109,7 +109,7 @@ body{
 .wrapper a{
     text-decoration: none;
     color: #fff;
-    margin-left: 70px;
+    margin-left: 75px;
    
 }
 

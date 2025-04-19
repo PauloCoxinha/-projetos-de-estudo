@@ -14,10 +14,12 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('imagens/wpp 2.jpg');
-    background-size: cover;
+    background: url('imagens/morango.jpg');   
+    background-size: cover; 
     background-repeat: no-repeat;
 }
+
+
 .wrapper{
     
     width: 420px;
