@@ -150,7 +150,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
-    margin-top: -17px;
+    margin-top: -20px;
     
     
 }
@@ -623,9 +623,7 @@ h1{
    
   }
 
-  .classic .classichover .paragrafohoverclassic p{
-    
-  }
+ 
 
   .classic .classichover .titulohoverclassic{
     display: none;
@@ -777,6 +775,69 @@ h1{
    animation-fill-mode: both;
 }
 
+
+
+
+.products {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 600px;
+    
+  }
+  
+  .product-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  
+  .product-item.active {
+    opacity: 1;
+    z-index: 2;
+    transform: translateX(0);
+  }
+  
+  .product-item.prev-active {
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(-100%);
+  }
+  
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    font-size: 2rem;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    
+    
+  }
+  
+  .prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .prev { left: 10px; }
+  .next { right: 10px; }    
+
+
+
   
    
   
@@ -913,38 +974,47 @@ margin-bottom: 40px;
 transform: translateY(-160px);
 }
 
+
   }
 
   @media screen and (min-width: 577px) and (max-width: 768px) {
         
-
+    .lastpage .next{
+        display: block;
+    }
+    
+    .lastpage .prev{
+        display: block;
+    }
 
  .secondimage img {
-    width: 200px;
-    margin-right: 100px;
+    width: 220px;
+    margin-right: 10px;
     border-radius: 55px;
-    margin-top: 120px;
+    margin-top: 220px;
     opacity: 0.6;
+    margin-left: 10px;
 }
 
 .secondimage2 img {
-    width: 300px;
-    margin-top: 60px;
+    width: 250px;
+    margin-top: -90px;
 }
 
 
 
 .secondpage .textpage .h1semovendo{
-    font-size: 24px;
-    width: 300px;
+    font-size: 20px;
+    width: 200px;   
+    margin-left: -140px;
 
 }
 
 
 .secondpage .textpage span p{
-    font-size: 20px;
-    margin-left: -70px; 
-    width: 400px;
+    font-size: 18px;
+    margin-left: -140px; 
+    width: 300px;
 }
 
 
@@ -953,19 +1023,216 @@ transform: translateY(-160px);
 }
 
 .textpage2 h1{
-    width: 500;
-    font-size: 22px;
-    margin-left: -100px;
-    margin-bottom: 30px;
+    width: 250px;
+    font-size: 18px;
+    margin-left: -220px;
+   margin-bottom: 30px;
 
 }
 
     .textpage2 p{   
-    font-size: 20px;
-    margin-left: -100px;
-    width: 400px;
-    margin-bottom: 40px;
+    font-size: 16px;
+    margin-left: -220px;
+    width: 250px;
+    margin-bottom: 280px;
+}
+.secondbutton button{
+    display: flex;
+    
+    margin-top: 50px;
+    width: 180px;
+    height: 100px;
+    margin-right: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E1E27;
+    border: 2px solid #575774;
+    color: #fff;
+    border-radius: 36px;
+    font-size: 23px;
+    font-family: 'Inter', 'Poppins', Arial, Helvetica, sans-serif;
+    
 }
 
   }
+
+
+  @media screen and (max-width: 576px) {
+    /* Celulares em geral */
+    .secondimage img {
+        width: 200px;
+        border-radius: 55px;
+        margin-top: 220px;
+        opacity: 0.6;
+        
+    }
+    
+    .secondimage2 img {
+        width: 240px;
+        margin-top: -270px;
+        margin-left: -25px;
+    }
+    
+    
+    
+    .secondpage .textpage .h1semovendo{
+        font-size: 17px;
+        width: 200px;   
+        margin-left: -160px;
+    
+    }
+    
+    
+    .secondpage .textpage span p{
+        font-size: 15px;
+        margin-left: -160px; 
+        width: 200px;
+    }
+    
+    
+    .textpage2{
+        margin-left: -260px;
+    }
+    
+    .textpage2 h1{
+        width: 200px;
+        font-size: 17px;
+        margin-left: -260px;
+       margin-bottom: 20px;
+    
+    }
+    
+        .textpage2 p{   
+        font-size: 15px;
+        margin-left: -260px;
+        width: 200px;
+        margin-bottom: 400px;
+    }
+    
+
+    .header .linkheader  {
+        margin-right: 15px;
+        margin-left: 15px;
+        font-size: 16px;
+        font-family: 'Inter', 'Poppins';
+        font-weight: 200;
+        color: #ffffffe3;
+        
+      
+        
+    }
+
+    .linkheader{
+        cursor: pointer;
+    }
+    
+    .linkheader:hover{
+        color: #D5D5D5;
+        font-weight: 700;
+    }   
+    
+    
+    
+    .headerR{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin-top: -17px;
+        
+        
+    }
+    
+    .headerR span a {
+        margin-right: 10px;
+        font-size: 16px;
+        margin-left: 20px;
+        
+       
+       
+        
+    }
+    
+    .headerR button{
+        background-color: transparent;
+        
+      
+        color: #fff;
+        font-size: 20px;
+        cursor: pointer;
+        
+    }
+    .secondbutton button{
+        display: flex;
+        
+        margin-top: 50px;
+        width: 150px;
+        height: 80px;
+        margin-right: 10px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        background-color: #1E1E27;
+        border: 2px solid #575774;
+        color: #fff;
+        border-radius: 36px;
+        font-size: 18px;
+        font-family: 'Inter', 'Poppins', Arial, Helvetica, sans-serif;
+        
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    /* Telas bem pequenas (smartphones compactos) */
+
+    .secondimage img {
+        width: 200px;
+        border-radius: 55px;
+        margin-top: 220px;
+        opacity: 0.6;
+        
+    }
+    
+    .secondimage2 img {
+        width: 240px;
+        margin-top: -160px;
+    }
+    
+    
+    
+    .secondpage .textpage .h1semovendo{
+        font-size: 17px;
+        width: 200px;   
+        margin-left: -140px;
+    
+    }
+    
+    
+    .secondpage .textpage span p{
+        font-size: 15px;
+        margin-left: -140px; 
+        width: 200px;
+    }
+    
+    
+    .textpage2{
+        margin-left: -260px;
+    }
+    
+    .textpage2 h1{
+        width: 200px;
+        font-size: 16px;
+        margin-left: -230px;
+       margin-bottom: 20px;
+    
+    }
+    
+        .textpage2 p{   
+        font-size: 16px;
+        margin-left: -230px;
+        width: 230px;
+        margin-bottom: 320px;
+    }
+  }
+ 
 

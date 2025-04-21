@@ -3,7 +3,7 @@ const bloco1 = document.querySelector('.classic');
 
 
 bloco1.addEventListener('mouseover', () => {
-    console.log('ta rodando')
+    console.log('ta rodando')   
 
     const elementos = {
         whitetext: document.querySelector('.whitetext'),
@@ -233,6 +233,31 @@ observer.observe(animatedElement);
 observer.observe(animatedElement2);
 observer.observe(animatedElement3);
 observer.observe(animatedElement4);
+
+
+const slides = document.querySelectorAll('.product-item');
+const prevbtn = document.querySelector('.prev');
+const nextbtn = document.querySelector('.next');
+
+let index = 0;
+
+function showslide(i){
+    slides.forEach(slide => slide.classList.remove('active'));
+    slides[i].classList.add('active');           
+}
+
+nextbtn.addEventListener('click', () => {
+    index++;
+    if(index >= slides.length) index = 0;
+    showslide(index);
+})
+
+
+prevbtn.addEventListener('click', () => {
+    index--;
+    if(index < 0) index = slides.length - 1;
+    showslide(index);
+});
 
 
 
