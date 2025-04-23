@@ -504,10 +504,10 @@ h1{
 }
 
 .secondimage img {
-    transform: translateY(-280px);
+    transform: translateY(-250px);
     width: 500px;
     margin-right: 30px;
-    border-radius: 55px;
+    border-radius: 55px;    
     opacity: 0.6;
 }
 
@@ -519,11 +519,12 @@ h1{
 }
 
 .secondpage .textpage h1{
-    font-size: 46px;
+    font-size: 35px;
+    width: 450px;   
 }
 
 .secondpage .textpage span {
-    right: 30px;
+    right: 25px;
       
     
 }
@@ -532,12 +533,13 @@ h1{
     color: #D5D5D5;
     text-align: left;
     font-size: 30px;
+    width: 450px;
     margin-top: 10px;
 }
 
 .textpage2{
     position: relative;
-    top: 160px;
+    top: 200px;
     width: 500px;  
     left: 800px; 
     
@@ -545,13 +547,13 @@ h1{
 
 .textpage2 p{
     color: #D5D5D5;
-    font-size: 30px;
+    font-size: 28px;
     margin-top: 10px;
     
 }
 
 .textpage2 h1{
-    font-size: 46px;
+    font-size: 40px;
     width: 500px;
     
 }
@@ -741,7 +743,7 @@ h1{
     display: none;
     color: #AD2431;
     text-align: center;
-    margin-bottom: 260px;
+    margin-bottom: 330px;
     margin-left: 200px;
     font-size: 36px;
     width: 300px;
@@ -752,7 +754,7 @@ h1{
     color: #fff;
     display: none;
     width: 250px;
-    margin-top: 40px;
+    margin-top: 20px;
     font-family: 'Poppins';
     font-weight: lighter;
     
@@ -797,14 +799,13 @@ h1{
     text-align: center;
     font-family: 'Poppins';
     font-size: 36px;
-    margin-right: 10px;
 }
 
 .dark .darkhover .paragrafohoverdark{
     font-size: 24px;
     color: #fff;
     display: none;
-    margin-left: 40px;  
+    margin-left: 50px;  
     font-family: 'Poppins';
     font-weight: lighter;
     
@@ -819,7 +820,7 @@ h1{
     border-radius: 25px; /* bordas bem arredondadas */
      padding: 10px 50px;
      font-size: 14px;
-     margin-top: 30px;
+     margin-top: 20px;
      margin-left: 90px;
     cursor: pointer;
    
@@ -1064,7 +1065,7 @@ h1{
     border: none;
     cursor: pointer;
     color: white;
-    padding: 8px;
+    padding: 5px 6px 3px 6px;
     border-radius: 50%;
     
     
@@ -1124,8 +1125,9 @@ h1{
 
  .secondimage img {
     width: 390px;
-    margin-right: 40px;
+    margin-right: 30px;
     border-radius: 55px;
+    margin-top: 30px;
     opacity: 0.6;
 }
 
@@ -1169,19 +1171,19 @@ font-size: 28;
     width: 300px;
     margin-right: 80px;
     border-radius: 55px;
-    margin-top: 160px;
+    margin-top: 115px;
     opacity: 0.6;
 }
 
 .secondimage2 img {
-    width: 300px;
+    width: 330px;
     margin-top: -60px;
 }
 
 
 
 .secondpage .textpage .h1semovendo{
-    font-size: 22px;
+    font-size: 25px;
     margin-left: -120px;
     width: 300px;
 
@@ -1189,9 +1191,9 @@ font-size: 28;
 
 
 .secondpage .textpage span p{
-    font-size: 20px;
+    font-size: 22px;
     margin-left: -120px; 
-    width: 300px;
+    width: 350px;
 }
 
 
@@ -1201,7 +1203,7 @@ font-size: 28;
 
 .textpage2 h1{
     flex-wrap: wrap;
-    font-size: 22px;
+    font-size: 25px;
     margin-left: -140px;
     margin-bottom: 30px;
     width: 300px;
@@ -1211,7 +1213,7 @@ font-size: 28;
 .textpage2 p{   
 font-size: 20px;
 margin-left: -140px;
-width: 300px;
+width: 350px;
 margin-bottom: 40px;
 transform: translateY(-160px);
 }
@@ -1233,8 +1235,8 @@ transform: translateY(-160px);
     width: 220px;
     margin-right: 10px;
     border-radius: 55px;
-    margin-top: 220px;
-    opacity: 0.6;
+    margin-top: 160px;
+    opacity: 0.6;   
     margin-left: 10px;
 }
 
@@ -1305,7 +1307,7 @@ transform: translateY(-160px);
     .secondimage img {
         width: 200px;
         border-radius: 55px;
-        margin-top: 220px;
+        margin-top: 170px;
         opacity: 0.6;
         
     }
@@ -1428,9 +1430,9 @@ transform: translateY(-160px);
     /* Telas bem pequenas (smartphones compactos) */
 
     .secondimage img {
-        width: 150px;
+        width: 130px;
         border-radius: 55px;
-        margin-top: 250px;
+        margin-top: 285px;
         opacity: 0.6;
         margin-right: 3px;
         
@@ -1439,9 +1441,9 @@ transform: translateY(-160px);
     .secondimage2 img {
         position: absolute;
         width: 150px;
-       margin-bottom: 280px;
-       top: -30px;
-       transform: translateX(-10px);
+       top: 0px;
+       margin-top: -240px;
+       transform: translateX(-10px); 
     }
 
    
@@ -1449,16 +1451,18 @@ transform: translateY(-160px);
     
     
     .secondpage .textpage .h1semovendo{
-        font-size: 14px;
-        width: 150px;   
-        margin-left: -190px;
+        font-size: 16px;
+        width: 350px;   
+        margin-left: -175px;
     
     }
     
     
     .secondpage .textpage span p{
-        font-size: 12px;
+        font-size: 11px;
         margin-left: -190px; 
+        margin-bottom: -30px;
+        margin-top: 50px;
         width: 150px;
     }
     
@@ -1469,15 +1473,15 @@ transform: translateY(-160px);
     }
     
     .textpage2 h1{
-        width: 150px;
-        font-size: 12px;
-        margin-left: -380px;
-       margin-bottom: 20px;
+        width: 200px;
+        font-size: 15px;
+        margin-left: -490px;
+       margin-bottom: 70px;
     
     }
     
         .textpage2 p{   
-        font-size: 11px;
+        font-size: 10px;
         margin-left: -380px;
         width: 150px;
         margin-bottom: 320px;
@@ -1516,7 +1520,7 @@ transform: translateY(-160px);
     .headerR span a {
         margin-right: 10px;
         font-size: 14px;
-        margin-left: 10px;
+        margin-left: 0px;
         
        
        
@@ -1576,7 +1580,7 @@ transform: translateY(-160px);
     }
 
     .dark .darkhover .paragrafohoverdark{
-        font-size: 20px;
+    font-size: 20px;
     color: #fff;
     display: none;
     width: 250px;
@@ -1622,7 +1626,110 @@ transform: translateY(-160px);
 .special .caramel .caramelhover .buynowflavor{
     margin-top: -0.5px;
 }
+
+.title1{
+    position: relative;
+    left: 30px;
+    top: 40px;
+    font-size: 18px;
+    opacity: 0.7;
+    display: flex;
     
+   
+}
+
+.title2{
+    position: relative;
+    top: 250px;
+    opacity: 0.7;
+    left: 30px;
+    display: flex;
+}
+
+.dark img{
+    width: 280px;
+    margin-left: 20px;
+    margin-top: 10px;
+    opacity: 0.8;
+    animation: float 2s ease-in-out infinite; 
+}
+
+.product-item h2{
+    margin-right: 20px;
+}
+
+.lastpage h1{
+    font-size: 40px;
+    margin-top: 40px;
+    text-align: center;
+    width: 350px;
+    
+    
+}  
+
+.classic .classichover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform: translateY(40px);
+    flex-direction: column;
+
+
+  }
+
+    
+
+  .classic .classichover .paragrafohoverclassic{
+    font-size: 24px;
+    color: #000000;
+    display: none;
+    margin-left: 50px;  
+    font-family: 'Poppins';
+    font-weight: bold;
+    margin-top: -180px;
+    
+   
+  }
+
+ 
+
+  .classic .classichover .titulohoverclassic{
+    display: none;
+    text-align: center;
+    font-size: 36px ;
+    color: #24201C;
+  }
+
+ 
+
+  .classic .classichover .buynowclassic{
+    display: none;
+    background-color: #3F3632; /* fundo azul escuro */
+    color: #fff;
+     font-weight: bold;
+     border: none;
+    border-radius: 25px; /* bordas bem arredondadas */
+     padding: 10px 50px;
+     font-size: 14px;
+     margin-top:30px;
+    margin-bottom: 100px;
+     margin-left: 80px;
+    cursor: pointer;
+   
+     transition: background-color 0.3s ease;
+  }
+
+
+  .classic  .black {
+    transform: translateX(-25px);
+   }
+
+   .classic .classichover .titulohoverclassic {
+    font-size: 33px;
+    margin-left: 20px;
+   }
+
   }
  
 
