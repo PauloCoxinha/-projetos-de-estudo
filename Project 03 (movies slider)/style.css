@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+
+
+.background{
+    
+   position: relative;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    overflow: hidden;
+    background: url('imgfundo/ichigo-kurosaki-3840x2160-20798.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+.background::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.buttons button{
+    width: 0px;
+    height: 0px;
+}
+
+.slider{
+    display: flex;
+}
+
+ .slider .slides{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ height: 100vh;
+ 
+}
+
+.slides img{
+   margin-right: 30px;
+   margin-top: 50px;
+   margin-left: 80px;
+    width: 200px;
+    border-radius: 45px;
+}
+
+.slides.bleach{
+    margin-left: 500px;
+
+}
+
+.slides.bleach img {
+    width: 230px;
+}

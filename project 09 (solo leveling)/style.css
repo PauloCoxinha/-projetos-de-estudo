@@ -89,3 +89,28 @@ body {
   background: var(--clr);
   color: #000;
 }
+
+img{
+  width: 300px;
+}
+
+/* /* Color Theme Swatches in Hex */
+.preliminary-bi-palette-neutrals-1-hex { color: #000000; }
+.preliminary-bi-palette-neutrals-2-hex { color: #A69F95; }
+.preliminary-bi-palette-neutrals-3-hex { color: #7A7A7A; }
+.preliminary-bi-palette-neutrals-4-hex { color: #FFFFFF; }
+.preliminary-bi-palette-neutrals-5-hex { color: #606B73; }
+
+/* Color Theme Swatches in RGBA */
+.preliminary-bi-palette-neutrals-1-rgba { color: rgba(0, 0, 0, 1); }
+.preliminary-bi-palette-neutrals-2-rgba { color: rgba(166, 159, 149, 1); }
+.preliminary-bi-palette-neutrals-3-rgba { color: rgba(122, 122, 122, 1); }
+.preliminary-bi-palette-neutrals-4-rgba { color: rgba(255, 255, 255, 1); }
+.preliminary-bi-palette-neutrals-5-rgba { color: rgba(96, 107, 115, 1); }
+
+/* Color Theme Swatches in HSLA */
+.preliminary-bi-palette-neutrals-1-hsla { color: hsla(0, 0, 0, 1); }
+.preliminary-bi-palette-neutrals-2-hsla { color: hsla(35, 8, 61, 1); }
+.preliminary-bi-palette-neutrals-3-hsla { color: hsla(0, 0, 47, 1); }
+.preliminary-bi-palette-neutrals-4-hsla { color: hsla(0, 0, 100, 1); }
+.preliminary-bi-palette-neutrals-5-hsla { color: hsla(205, 9, 41, 1); }
