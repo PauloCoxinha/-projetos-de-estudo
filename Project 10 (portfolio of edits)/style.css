@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap');
+
+
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    
+    
+}
+
+
+body {
+  min-height: 100vh;
+ background: linear-gradient(to bottom, #E3E5E9 10%, #333437 100%);
+ 
+  
+}
+
+section{
+    height: 100vh; /* ocupa 100% da altura da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  scroll-snap-align: start;
+}
+
+section .page1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  
+}
+
+.page1 .footer{
+  display: flex;
+  background-color: var(--cor1);
+  margin: 40px;
+  width: 800px;
+  height: 70px;
+  border-radius: 30px;
+  padding: 10px;
+  margin-bottom: 530px;
+ 
+}
+
+.footer span{
+  display: flex;
+  margin-left: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+.footer span a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.footer span i{
+  font-size: 45px;
+  margin-right: 100px;
+  transform: translateY(25px);
+  text-shadow: 2px 2px 30px #fff;
+}
+
+.footer  span a .solo i{
+  gap: 0px;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 30px #fff;
+}
+
+.footer span a .linkname{
+  font-size: 26px;
+  right: 30px;
+  transform: translateY(-22px);
+  text-shadow: 2px 2px 30px #fff;
+ 
+  
+ 
+
+}
+.principal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-500px);
+  
+  
+}
+.page1 .principal .principaltext{
+  text-align: center;
+  display: flex;
+ 
+  
+  
+}
+.principaltext h1{
+  font-family: 'Poppins';
+  color: #45454A;
+  font-weight: 900;
+  font-size: 50px;
+}
+.principaltext .portfolio{
+  font-family: 'Yuji Boku';
+  color: #4A4545;
+  transform: translateY(-20px);
+}
+
+
+#gif-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.2;
+  pointer-events: none;
+  
+}
+
+#gif2-bg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.page2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.page2 .videosedit{
+  flex: 1;
+  width: 600px;
+  display: flex;
+  justify-content: flex-start ; /* ou space-between, se tiver outro conteúdo */
+  align-items: center;
+
+}
+
+.page2 .videosedit iframe{
+  border: none;
+  margin-left: 20px;
+  margin-bottom: -150px;
+  
+ 
+}
+
+.page2 .tituloedit{
+  font-family: 'Poppins';
+  color: #fff;
+  text-shadow: 2px 2px 30px #fff;
+  margin-bottom: 360px;
+}
+
+
+
+
+:root{
+  --cor1: #6E6E6E;
+}
+
+
+  
